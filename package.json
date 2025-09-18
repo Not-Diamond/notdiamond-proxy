@@ -31,7 +31,11 @@
       "rollup": "4.24.0",
       "cross-spawn": "7.0.5",
       "solid-js": "1.9.4",
-      "form-data": "4.0.4"
+      "form-data": "4.0.4",
+      "micromatch": "4.0.8",
+      "nanoid": "3.3.8",
+      "vite": "5.4.20",
+      "undici": "5.28.5"
     }
   }
 }
