@@ -35,7 +35,8 @@
       "micromatch": "4.0.8",
       "nanoid": "3.3.8",
       "vite": "5.4.20",
-      "undici": "5.28.5"
+      "undici": "5.28.5",
+      "esbuild": "0.25.10"
     }
   }
 }
