@@ -9,10 +9,10 @@ import {
 } from "@opentelemetry/sdk-metrics";
 import { Resource } from "@opentelemetry/resources";
 import { hrTimeToMicroseconds } from "@opentelemetry/core";
-import { HrTime } from "@opentelemetry/api";
+import { HrTime, metrics } from "@opentelemetry/api";
 import { PrometheusSerializer } from "./PrometheusSerializer";
 
-export { NOOP_METER_PROVIDER } from "@opentelemetry/api/build/src/metrics/NoopMeterProvider";
+export const NOOP_METER_PROVIDER = metrics.getMeterProvider();
 
 export function initMetrics(
   metricReader: MetricReader,

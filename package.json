@@ -35,8 +35,16 @@
       "micromatch": "4.0.8",
       "nanoid": "3.3.8",
       "vite": "5.4.20",
-      "undici": "5.28.5",
-      "esbuild": "0.25.10"
+      "undici": "5.29.0",
+      "esbuild": "0.25.10",
+      "es5-ext": "0.10.63",
+      "express": "4.20.0",
+      "serve-static": "1.16.0",
+      "send": "0.19.0",
+      "cookie": "0.7.0",
+      "tsup": "8.5.0",
+      "brace-expansion": "2.0.2",
+      "jsondiffpatch": "0.7.2"
     }
   }
 }
