@@ -982,7 +982,7 @@ async function fetchModelLoop(
       throw lastException;
     } else {
       throw new Error(
-        `No API keys found (for ${model}). You can configure API secrets at https://www.braintrust.dev/app/settings?subroute=secrets`,
+        `No API keys found (for ${model}). You can configure API secrets at https://app.notdiamond.ai/ai-providers`,
       );
     }
   }
