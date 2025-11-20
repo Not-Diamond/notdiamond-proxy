@@ -46,6 +46,7 @@
       "tsup": "8.5.0",
       "brace-expansion": "2.0.2",
       "jsondiffpatch": "0.7.2",
+      "js-yaml": ">=4.1.1",
       "playwright": "1.56.1",
       "@playwright/test": "1.56.1",
       "expr-eval": "npm:expr-eval-fork@3.0.0"
