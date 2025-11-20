@@ -35,7 +35,7 @@
       "glob": ">=10.5.0",
       "micromatch": "4.0.8",
       "nanoid": "3.3.8",
-      "vite": "5.4.20",
+      "vite": ">=5.4.21",
       "undici": "5.29.0",
       "esbuild": "0.25.10",
       "es5-ext": "0.10.63",
@@ -46,6 +46,7 @@
       "tsup": "8.5.0",
       "brace-expansion": "2.0.2",
       "jsondiffpatch": "0.7.2",
+      "js-yaml": ">=4.1.1",
       "playwright": "1.56.1",
       "@playwright/test": "1.56.1",
       "expr-eval": "npm:expr-eval-fork@3.0.0"

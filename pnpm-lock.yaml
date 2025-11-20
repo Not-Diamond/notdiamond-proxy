@@ -16,7 +16,7 @@ overrides:
   glob: '>=10.5.0'
   micromatch: 4.0.8
   nanoid: 3.3.8
-  vite: 5.4.20
+  vite: '>=5.4.21'
   undici: 5.29.0
   esbuild: 0.25.10
   es5-ext: 0.10.63
@@ -27,6 +27,7 @@ overrides:
   tsup: 8.5.0
   brace-expansion: 2.0.2
   jsondiffpatch: 0.7.2
+  js-yaml: '>=4.1.1'
   playwright: 1.56.1
   '@playwright/test': 1.56.1
   expr-eval: npm:expr-eval-fork@3.0.0
@@ -51,10 +52,10 @@ importers:
         version: 1.13.4
       vite-tsconfig-paths:
         specifier: ^4.3.2
-        version: 4.3.2(typescript@5.9.3)(vite@5.4.20(@types/node@20.19.25))
+        version: 4.3.2(typescript@5.9.3)(vite@7.2.4(@types/node@20.19.25)(jiti@1.21.7))
       vitest:
         specifier: ^2.1.9
-        version: 2.1.9(@types/node@20.19.25)
+        version: 2.1.9(@types/node@20.19.25)(jiti@1.21.7)
 
   apis/cloudflare:
     dependencies:
@@ -222,10 +223,10 @@ importers:
         version: 5.9.3
       vite-tsconfig-paths:
         specifier: ^4.3.2
-        version: 4.3.2(typescript@5.9.3)(vite@5.4.20(@types/node@20.19.25))
+        version: 4.3.2(typescript@5.9.3)(vite@7.2.4(@types/node@20.19.25)(jiti@1.21.7))
       vitest:
         specifier: ^2.1.9
-        version: 2.1.9(@types/node@20.19.25)
+        version: 2.1.9(@types/node@20.19.25)(jiti@1.21.7)
 
 packages:
 
@@ -2326,7 +2327,7 @@ packages:
     resolution: {integrity: sha512-tVL6uJgoUdi6icpxmdrn5YNo3g3Dxv+IHJBr0GXHaEdTcw3F+cPKnsXFhli6nO+f/6SDKPHEK1UN+k+TQv0Ehg==}
     peerDependencies:
       msw: ^2.4.9
-      vite: 5.4.20
+      vite: '>=5.4.21'
     peerDependenciesMeta:
       msw:
         optional: true
@@ -3571,8 +3572,8 @@ packages:
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
-  js-yaml@4.1.0:
-    resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
+  js-yaml@4.1.1:
+    resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
     hasBin: true
 
   jsesc@3.1.0:
@@ -4884,26 +4885,31 @@ packages:
   vite-tsconfig-paths@4.3.2:
     resolution: {integrity: sha512-0Vd/a6po6Q+86rPlntHye7F31zA2URZMbH8M3saAZ/xR9QoGN/L21bxEGfXdWmFdNkqPpRdxFT7nmNe12e9/uA==}
     peerDependencies:
-      vite: 5.4.20
+      vite: '>=5.4.21'
     peerDependenciesMeta:
       vite:
         optional: true
 
-  vite@5.4.20:
-    resolution: {integrity: sha512-j3lYzGC3P+B5Yfy/pfKNgVEg4+UtcIJcVRt2cDjIOmhLourAqPqf8P7acgxeiSgUB7E3p2P8/3gNIgDLpwzs4g==}
-    engines: {node: ^18.0.0 || >=20.0.0}
+  vite@7.2.4:
+    resolution: {integrity: sha512-NL8jTlbo0Tn4dUEXEsUg8KeyG/Lkmc4Fnzb8JXN/Ykm9G4HNImjtABMJgkQoVjOBN/j2WAwDTRytdqJbZsah7w==}
+    engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
-      '@types/node': ^18.0.0 || >=20.0.0
-      less: '*'
+      '@types/node': ^20.19.0 || >=22.12.0
+      jiti: '>=1.21.0'
+      less: ^4.0.0
       lightningcss: ^1.21.0
-      sass: '*'
-      sass-embedded: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
+      sass: ^1.70.0
+      sass-embedded: ^1.70.0
+      stylus: '>=0.54.8'
+      sugarss: ^5.0.0
+      terser: ^5.16.0
+      tsx: ^4.8.1
+      yaml: ^2.4.2
     peerDependenciesMeta:
       '@types/node':
+        optional: true
+      jiti:
         optional: true
       less:
         optional: true
@@ -4918,6 +4924,10 @@ packages:
       sugarss:
         optional: true
       terser:
+        optional: true
+      tsx:
+        optional: true
+      yaml:
         optional: true
 
   vitest@2.1.9:
@@ -6350,7 +6360,7 @@ snapshots:
       globals: 13.24.0
       ignore: 5.3.0
       import-fresh: 3.3.0
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       minimatch: 3.1.2
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
@@ -6552,7 +6562,7 @@ snapshots:
       expr-eval-fork: 3.0.0
       flat: 5.0.2
       ibm-cloud-sdk-core: 5.1.0
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       langchain: 0.3.6(@langchain/anthropic@0.3.8(@langchain/core@0.3.19(openai@4.47.1)))(@langchain/cohere@0.3.1(@aws-sdk/client-sso-oidc@3.699.0(@aws-sdk/client-sts@3.699.0))(@langchain/core@0.3.19(openai@4.47.1)))(@langchain/core@0.3.19(openai@4.47.1))(@langchain/google-genai@0.1.4(@langchain/core@0.3.19(openai@4.47.1))(zod@3.25.76))(@langchain/mistralai@0.1.1(@langchain/core@0.3.19(openai@4.47.1)))(axios@1.12.0)(openai@4.47.1)
       langsmith: 0.2.8(openai@4.47.1)
       openai: 4.47.1
@@ -7680,13 +7690,13 @@ snapshots:
       chai: 5.1.2
       tinyrainbow: 1.2.0
 
-  '@vitest/mocker@2.1.9(vite@5.4.20(@types/node@20.19.25))':
+  '@vitest/mocker@2.1.9(vite@7.2.4(@types/node@20.19.25)(jiti@1.21.7))':
     dependencies:
       '@vitest/spy': 2.1.9
       estree-walker: 3.0.3
       magic-string: 0.30.17
     optionalDependencies:
-      vite: 5.4.20(@types/node@20.19.25)
+      vite: 7.2.4(@types/node@20.19.25)(jiti@1.21.7)
 
   '@vitest/pretty-format@2.1.9':
     dependencies:
@@ -8658,7 +8668,7 @@ snapshots:
       imurmurhash: 0.1.4
       is-glob: 4.0.3
       is-path-inside: 3.0.3
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       json-stable-stringify-without-jsonify: 1.0.1
       levn: 0.4.1
       lodash.merge: 4.6.2
@@ -9154,7 +9164,7 @@ snapshots:
 
   js-tokens@4.0.0: {}
 
-  js-yaml@4.1.0:
+  js-yaml@4.1.1:
     dependencies:
       argparse: 2.0.1
 
@@ -9223,7 +9233,7 @@ snapshots:
       '@langchain/openai': 0.3.14(@langchain/core@0.3.19(openai@4.47.1))
       '@langchain/textsplitters': 0.1.0(@langchain/core@0.3.19(openai@4.47.1))
       js-tiktoken: 1.0.15
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       jsonpointer: 5.0.1
       langsmith: 0.2.8(openai@4.47.1)
       openapi-types: 12.1.3
@@ -10723,15 +10733,16 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite-node@2.1.9(@types/node@20.19.25):
+  vite-node@2.1.9(@types/node@20.19.25)(jiti@1.21.7):
     dependencies:
       cac: 6.7.14
       debug: 4.3.7
       es-module-lexer: 1.7.0
       pathe: 1.1.2
-      vite: 5.4.20(@types/node@20.19.25)
+      vite: 7.2.4(@types/node@20.19.25)(jiti@1.21.7)
     transitivePeerDependencies:
       - '@types/node'
+      - jiti
       - less
       - lightningcss
       - sass
@@ -10740,31 +10751,37 @@ snapshots:
       - sugarss
       - supports-color
       - terser
+      - tsx
+      - yaml
 
-  vite-tsconfig-paths@4.3.2(typescript@5.9.3)(vite@5.4.20(@types/node@20.19.25)):
+  vite-tsconfig-paths@4.3.2(typescript@5.9.3)(vite@7.2.4(@types/node@20.19.25)(jiti@1.21.7)):
     dependencies:
       debug: 4.3.7
       globrex: 0.1.2
       tsconfck: 3.1.4(typescript@5.9.3)
     optionalDependencies:
-      vite: 5.4.20(@types/node@20.19.25)
+      vite: 7.2.4(@types/node@20.19.25)(jiti@1.21.7)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@5.4.20(@types/node@20.19.25):
+  vite@7.2.4(@types/node@20.19.25)(jiti@1.21.7):
     dependencies:
       esbuild: 0.25.10
+      fdir: 6.5.0(picomatch@4.0.3)
+      picomatch: 4.0.3
       postcss: 8.5.6
       rollup: 4.24.0
+      tinyglobby: 0.2.15
     optionalDependencies:
       '@types/node': 20.19.25
       fsevents: 2.3.3
+      jiti: 1.21.7
 
-  vitest@2.1.9(@types/node@20.19.25):
+  vitest@2.1.9(@types/node@20.19.25)(jiti@1.21.7):
     dependencies:
       '@vitest/expect': 2.1.9
-      '@vitest/mocker': 2.1.9(vite@5.4.20(@types/node@20.19.25))
+      '@vitest/mocker': 2.1.9(vite@7.2.4(@types/node@20.19.25)(jiti@1.21.7))
       '@vitest/pretty-format': 2.1.9
       '@vitest/runner': 2.1.9
       '@vitest/snapshot': 2.1.9
@@ -10780,12 +10797,13 @@ snapshots:
       tinyexec: 0.3.1
       tinypool: 1.0.1
       tinyrainbow: 1.2.0
-      vite: 5.4.20(@types/node@20.19.25)
-      vite-node: 2.1.9(@types/node@20.19.25)
+      vite: 7.2.4(@types/node@20.19.25)(jiti@1.21.7)
+      vite-node: 2.1.9(@types/node@20.19.25)(jiti@1.21.7)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 20.19.25
     transitivePeerDependencies:
+      - jiti
       - less
       - lightningcss
       - msw
@@ -10795,6 +10813,8 @@ snapshots:
       - sugarss
       - supports-color
       - terser
+      - tsx
+      - yaml
 
   vue@3.5.11(typescript@5.9.3):
     dependencies:
