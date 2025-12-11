@@ -30,9 +30,10 @@ overrides:
   js-yaml: '>=4.1.1'
   playwright: 1.56.1
   '@playwright/test': 1.56.1
-  expr-eval: npm:expr-eval-fork@3.0.0
+  expr-eval: npm:expr-eval-fork@>=3.0.1
+  jws: '>=3.2.3'
 
-packageExtensionsChecksum: sha256-n10sPxvw0HnU5/oClUz5jxmF/y3rtQokJYv6E0o6hlY=
+packageExtensionsChecksum: sha256-bvj1KFIh1Yo17cBGExCUeNzH6iTZPEip5ZAPWNH/7P8=
 
 importers:
 
@@ -3134,8 +3135,8 @@ packages:
     resolution: {integrity: sha512-JhFGDVJ7tmDJItKhYgJCGLOWjuK9vPxiXoUFLwLDc99NlmklilbiQJwoctZtt13+xMw91MCk/REan6MWHqDjyA==}
     engines: {node: '>=12.0.0'}
 
-  expr-eval-fork@3.0.0:
-    resolution: {integrity: sha512-29S+IZ2g8qSk5q7gOUYozO7zi4mj/sCVo+HB2h0f0ER4ZCZr9b/+5SWIedvV0SHq3IxBW2/TJrPn77YxMsoVwg==}
+  expr-eval-fork@3.0.1:
+    resolution: {integrity: sha512-JRex9aykIt6AqhcQK+u1bFcBy2f+muwJoGCtAZmOC0yrktaCegtH42sLnZdNsD2/Ko9j+3pLWi4nIkNQez02bg==}
     engines: {node: '>=16.9.0'}
 
   exsolve@1.0.8:
@@ -3622,11 +3623,11 @@ packages:
     resolution: {integrity: sha512-ZZow9HBI5O6EPgSJLUb8n2NKgmVWTwCvHGwFuJlMjvLFqlGG6pjirPhtdsseaLZjSibD8eegzmYpUZwoIlj2cQ==}
     engines: {node: '>=4.0'}
 
-  jwa@1.4.1:
-    resolution: {integrity: sha512-qiLX/xhEEFKUAJ6FiBMbes3w9ATzyk5W7Hvzpa/SLYdxNtng+gcurvrI7TbACjIXlsJyr05/S1oUhZrc63evQA==}
+  jwa@2.0.1:
+    resolution: {integrity: sha512-hRF04fqJIP8Abbkq5NKGN0Bbr3JxlQ+qhZufXVr0DvujKy93ZCbXZMHDL4EOtodSbCWxOqR8MS1tXA5hwqCXDg==}
 
-  jws@3.2.2:
-    resolution: {integrity: sha512-YHlZCB6lMTllWDtSPHz/ZXTsi8S00usEV6v1tjq8tOUZzw7DpSDWVXjXDre6ed1w/pd495ODpHZYSdkRTsa0HA==}
+  jws@4.0.1:
+    resolution: {integrity: sha512-EKI/M/yqPncGUUh44xz0PxSidXFr/+r0pA70+gIYhjv+et7yxM+s29Y+VGDkovRofQem0fs7Uvf4+YmAdyRduA==}
 
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
@@ -6558,8 +6559,8 @@ snapshots:
       '@langchain/core': 0.3.19(openai@4.47.1)
       '@langchain/openai': 0.3.14(@langchain/core@0.3.19(openai@4.47.1))
       binary-extensions: 2.2.0
-      expr-eval: expr-eval-fork@3.0.0
-      expr-eval-fork: 3.0.0
+      expr-eval: expr-eval-fork@3.0.1
+      expr-eval-fork: 3.0.1
       flat: 5.0.2
       ibm-cloud-sdk-core: 5.1.0
       js-yaml: 4.1.1
@@ -8722,7 +8723,7 @@ snapshots:
 
   expect-type@1.2.2: {}
 
-  expr-eval-fork@3.0.0: {}
+  expr-eval-fork@3.0.1: {}
 
   exsolve@1.0.8: {}
 
@@ -9194,7 +9195,7 @@ snapshots:
 
   jsonwebtoken@9.0.2:
     dependencies:
-      jws: 3.2.2
+      jws: 4.0.1
       lodash.includes: 4.3.0
       lodash.isboolean: 3.0.3
       lodash.isinteger: 4.0.4
@@ -9212,15 +9213,15 @@ snapshots:
       object.assign: 4.1.7
       object.values: 1.2.1
 
-  jwa@1.4.1:
+  jwa@2.0.1:
     dependencies:
       buffer-equal-constant-time: 1.0.1
       ecdsa-sig-formatter: 1.0.11
       safe-buffer: 5.2.1
 
-  jws@3.2.2:
+  jws@4.0.1:
     dependencies:
-      jwa: 1.4.1
+      jwa: 2.0.1
       safe-buffer: 5.2.1
 
   keyv@4.5.4:

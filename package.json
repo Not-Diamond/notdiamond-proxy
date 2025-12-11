@@ -49,12 +49,13 @@
       "js-yaml": ">=4.1.1",
       "playwright": "1.56.1",
       "@playwright/test": "1.56.1",
-      "expr-eval": "npm:expr-eval-fork@3.0.0"
+      "expr-eval": "npm:expr-eval-fork@>=3.0.1",
+      "jws": ">=3.2.3"
     },
     "packageExtensions": {
       "@langchain/community": {
         "dependencies": {
-          "expr-eval-fork": "3.0.0"
+          "expr-eval-fork": ">=3.0.1"
         }
       }
     }
